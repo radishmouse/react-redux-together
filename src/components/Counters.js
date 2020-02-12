@@ -7,8 +7,9 @@ export default function Counters({
   handleDel
 }) {
   return (
-    <div>
+    <>
       <button onClick={handleAdd}>Add Counter</button>
+      <div className="counters">
       {
         counts.map((c, i) => {
           return (
@@ -19,12 +20,13 @@ export default function Counters({
               count={c.count}
             />
               <button onClick={() => {
-                handleDel(i)
+                handleDel(c.id)
               }}>Delete</button>
             </div>            
           );
         })
       }
-    </div>    
+      </div>    
+    </>    
   );
 }

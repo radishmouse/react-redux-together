@@ -19,7 +19,7 @@ export function counts(state=[], action) {
     newState.push(count(undefined, action));
     break;
   case DEL_COUNT:
-    newState.splice(action.payload.id, 1);
+    newState = newState.filter(c => c.id !== action.payload.id);
     break;
   case INCREMENT:
   case DECREMENT:

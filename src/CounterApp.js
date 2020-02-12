@@ -14,8 +14,8 @@ const store = createStore(counts);
 
 export default function CounterApp() {
     return (
-        <Provider store={store}>
-          <Counters />
-        </Provider>
+      <Provider store={store}>
+        <Counters />
+      </Provider>
     );
 }
