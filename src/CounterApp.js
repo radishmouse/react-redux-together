@@ -3,19 +3,19 @@ import {
 } from 'redux';
 
 import {
-    count
+    counts
 } from './reducers';
 
 import React from 'react';
-import Counter from './containers/CounterContainer';
+import Counters from './containers/CountersContainer';
 import { Provider } from 'react-redux';
 
-const store = createStore(count);
+const store = createStore(counts);
 
 export default function CounterApp() {
     return (
         <Provider store={store}>
-            <Counter />
+          <Counters />
         </Provider>
-    )
+    );
 }
